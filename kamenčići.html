@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<htm>
+<head>
+	<title>Ispit iz predmeta WEB 1</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row row-cols-sm-2 row-cols-md-2 row-cols-lg-3 justify-content-center ">
+			<h1 id="naslov">Broj kamenčića : </h1>
+		</div>
+		<form class="form-inline row-cols-sm-2 row-cols-md-2 row-cols-lg-4 justify-content-center">
+			<div class="form-group m-1">
+				<input id="input" class="form-control-lg" type="number" min="1" max="25"
+					data-bind="value:replyNumber" />
+			</div>
+			<button onclick="odigraj()" id="submit" type="button"
+				class="btn btn-success btn-lg justify-content-center">Odigraj</button>
+		</form>
+		<br>
+		<div style="text-align: center" class="alert alert-success">
+			<p id="igrac">Na potezu je igrač ...</p>
+		</div> <br>
+		<div id="igra" style="visibility: hidden; border: 2px solid black; background-color: skyblue ">
+			<ul id="ul">
+			</ul>
+		</div>
+		<div class="row justify-content-center p-4">
+			<button onclick="{location.reload(); return false;}" type="button" class="btn btn-lg btn-outline-primary"
+				id="igrajPonovo" value="igrajPonovo" style="visibility: hidden;">IGRAJ PONOVO!</button>
+		</div>
+	</div>
+
+</body>
+<script src="js.js"></script>
